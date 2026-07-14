@@ -2,7 +2,7 @@
 
 > EXPERIMENTAL — TEST NETWORK ONLY — NOT A FINANCIAL PRODUCT OR SERVICE — NO REAL FUNDS — AS IS, NO WARRANTY, NO LIABILITY — USE AT YOUR OWN RISK
 
-This directory is the public-branch publication channel for T-M4.4. Each live artifact is named
+This directory is mirrored in the public commitments repository (https://github.com/Degrudv/caravan-commitments) as the public-branch publication channel for T-M4.4. Each live artifact is named
 `<batchId>.json`, validates against `schema.json`, and contains only the batch hash, Base Sepolia transaction
 hash, chain ID, batch ID, and integer close time. The private canonical matcher snapshot is never committed.
 
