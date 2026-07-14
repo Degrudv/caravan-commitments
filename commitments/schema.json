@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caravan.invalid/schemas/batch-publication-v1.json",
+  "title": "Caravan public batch commitment",
+  "$comment": "EXPERIMENTAL — TEST NETWORK ONLY — NOT A FINANCIAL PRODUCT OR SERVICE — NO REAL FUNDS — AS IS, NO WARRANTY, NO LIABILITY — USE AT YOUR OWN RISK",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "chainId",
+    "batchId",
+    "closedAtUnixSeconds",
+    "batchHash",
+    "transactionHash"
+  ],
+  "properties": {
+    "schema": { "const": "caravan.batch-publication.v1" },
+    "chainId": { "const": 84532 },
+    "batchId": { "type": "string", "pattern": "^[A-Za-z0-9._:-]{1,128}$" },
+    "closedAtUnixSeconds": { "type": "integer", "minimum": 0 },
+    "batchHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "transactionHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" }
+  }
+}
